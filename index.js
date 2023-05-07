@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 // Ruta de ejemplo que lee los datos de Firebase Realtime Database
 app.get('/datos', (req, res) => {
-  const ref = admin.database().ref('/User/23362/UltimaAsistencia');
+  const ref = admin.database().ref('/datos');
   ref.once('value', (snapshot) => {
     const data = snapshot.val();
     res.send(data);
